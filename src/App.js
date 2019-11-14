@@ -30,6 +30,7 @@ export default class App extends Component {
       // Once the user has approved, they can update, decrypt, and interact  
       // with their 3Box profile store.
       const box = await Box.openBox(this.state.accounts[0], window.ethereum);
+      this.setState({box});
       // Sync 3Box
       await box.syncDone
       console.log("3Box synced"); 
