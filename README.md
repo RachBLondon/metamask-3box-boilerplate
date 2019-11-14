@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 3Box and MetaMask Boilerplate
+Using:
+- [Create React App](https://github.com/facebook/create-react-app) - React Boilerplate
+- [React Router](https://github.com/ReactTraining/react-router#readme) - Routing
+- [3Box.js](https://github.com/3box/3box-js) - 3Box library
+- Intergrates with Web3 connection with MetaMask
+
 
 ## Available Scripts
 

@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
-import "./App.css";
 import Box from "3box";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const getThreeBox = async (address) => {
   const profile = await Box.getProfile(address);
-  console.log(profile);
   return profile;
 };
 
@@ -48,26 +45,12 @@ export default class App extends Component {
               <li>
                 <Link to="/profile">Profile</Link>
               </li>
-              <li>
-                <Link to="/photos">Photos</Link>
-              </li>
-              <li>
-                <Link to="/messager">Messenger</Link>
-              </li>
             </ul>
           </nav>
 
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
           <Switch>
             <Route path="/profile">
               <Profile />
-            </Route>
-            <Route path="/messenger">
-              <Messenger />
-            </Route>
-            <Route path="/photos">
-              <Photos />
             </Route>
             <Route path="/">
               <Home />
@@ -87,14 +70,4 @@ class Profile extends Component {
   render() {
     return <h2>Profile </h2>;
   }
-}
-
-class Photos extends Component {
-  render() {
-    return <h2>Photos</h2>;
-  }
-}
-
-function Messenger() {
-  return <h2>Messenger</h2>;
 }
